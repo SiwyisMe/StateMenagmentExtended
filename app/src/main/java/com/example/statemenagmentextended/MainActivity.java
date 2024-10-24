@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         
         sharedPreferences = getSharedPreferences("AppState", MODE_PRIVATE);
@@ -124,12 +123,16 @@ public class MainActivity extends AppCompatActivity {
             optionalTextView.setTextColor(getResources().getColor(android.R.color.white));
             userInput.setTextColor(getResources().getColor(android.R.color.white));
             userInput.setHintTextColor(getResources().getColor(android.R.color.white));
+            checkBox.setTextColor(getResources().getColor(android.R.color.white));
+            themeSwitch.setTextColor(getResources().getColor(android.R.color.white));
         } else {
             Layout.setBackgroundColor(getResources().getColor(android.R.color.white));
             counterTextView.setTextColor(getResources().getColor(android.R.color.black));
             optionalTextView.setTextColor(getResources().getColor(android.R.color.black));
             userInput.setTextColor(getResources().getColor(android.R.color.black));
             userInput.setHintTextColor(getResources().getColor(android.R.color.darker_gray));
+            checkBox.setTextColor(getResources().getColor(android.R.color.black));
+            themeSwitch.setTextColor(getResources().getColor(android.R.color.black));
         }
     }
 }
